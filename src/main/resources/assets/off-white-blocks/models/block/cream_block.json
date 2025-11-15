@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "off-white-blocks:block/cream_block"
+  }
+}

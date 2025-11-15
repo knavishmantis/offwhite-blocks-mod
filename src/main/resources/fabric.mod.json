@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "off-white-blocks",
+  "version": "${version}",
+  "name": "Off-White-Blocks",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/off-white-blocks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "quinncaverly.offWhiteBlocks.client.OffWhiteBlocksDataGenerator"
+    ],
+    "client": [
+      "quinncaverly.offWhiteBlocks.client.OffWhiteBlocksClient"
+    ],
+    "main": [
+      "quinncaverly.offWhiteBlocks.OffWhiteBlocks"
+    ]
+  },
+  "mixins": [
+    "off-white-blocks.mixins.json",
+    {
+      "config": "off-white-blocks.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
