@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "knavish-blocks:block/black_screen_block"
+    }
+  }
+}

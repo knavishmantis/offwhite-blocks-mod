@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "knavish-blocks:block/blue_screen_block"
+    }
+  }
+}

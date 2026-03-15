@@ -14,7 +14,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        "off-white-blocks" {
+        "knavish-blocks" {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }
@@ -78,6 +78,10 @@ java {
     // if it is present.
     // If you remove this line, sources will not be generated.
     withSourcesJar()
+}
+
+tasks.withType(Zip).configureEach {
+    zip64 = true
 }
 
 jar {

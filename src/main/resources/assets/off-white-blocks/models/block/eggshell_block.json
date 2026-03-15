@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "off-white-blocks:block/eggshell_block"
-  }
-}

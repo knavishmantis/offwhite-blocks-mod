@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "knavish-blocks:block/canvas_block" }
+  }
+}

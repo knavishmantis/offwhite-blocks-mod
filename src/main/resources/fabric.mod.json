@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "off-white-blocks",
+  "id": "knavish-blocks",
   "version": "${version}",
-  "name": "Off-White-Blocks",
+  "name": "Knavish Blocks",
   "description": "",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/off-white-blocks/icon.png",
+  "icon": "assets/knavish-blocks/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "quinncaverly.offWhiteBlocks.client.OffWhiteBlocksDataGenerator"
+      "quinncaverly.knavishBlocks.client.KnavishBlocksDataGenerator"
     ],
     "client": [
-      "quinncaverly.offWhiteBlocks.client.OffWhiteBlocksClient"
+      "quinncaverly.knavishBlocks.client.KnavishBlocksClient"
     ],
     "main": [
-      "quinncaverly.offWhiteBlocks.OffWhiteBlocks"
+      "quinncaverly.knavishBlocks.KnavishBlocks"
     ]
   },
   "mixins": [
-    "off-white-blocks.mixins.json",
+    "knavish-blocks.mixins.json",
     {
-      "config": "off-white-blocks.client.mixins.json",
+      "config": "knavish-blocks.client.mixins.json",
       "environment": "client"
     }
   ],
