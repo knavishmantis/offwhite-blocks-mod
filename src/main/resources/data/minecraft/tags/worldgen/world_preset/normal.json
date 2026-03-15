@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "knavish-blocks:offwhite_monotone_grid",
+    "knavish-blocks:offwhite_flat",
     "knavish-blocks:offwhite_flat_checkerboard",
     "knavish-blocks:offwhite_marble_flat"
   ]

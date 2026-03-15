@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "knavish-blocks:block/mono_dark_146"
+  }
+}

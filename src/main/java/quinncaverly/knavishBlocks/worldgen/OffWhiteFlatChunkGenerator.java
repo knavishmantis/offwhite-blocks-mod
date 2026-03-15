@@ -31,17 +31,20 @@ public class OffWhiteFlatChunkGenerator extends ChunkGenerator {
         instance.group(
             BiomeSource.CODEC.fieldOf("biome_source").forGetter(ChunkGenerator::getBiomeSource),
             Codec.BOOL.optionalFieldOf("checkerboard", false).forGetter(g -> g.checkerboard),
-            Codec.BOOL.optionalFieldOf("marble", false).forGetter(g -> g.marble)
+            Codec.BOOL.optionalFieldOf("marble", false).forGetter(g -> g.marble),
+            Codec.BOOL.optionalFieldOf("monotone", false).forGetter(g -> g.monotone)
         ).apply(instance, OffWhiteFlatChunkGenerator::new)
     );
 
     private final boolean checkerboard;
     private final boolean marble;
+    private final boolean monotone;
 
-    public OffWhiteFlatChunkGenerator(BiomeSource biomeSource, boolean checkerboard, boolean marble) {
+    public OffWhiteFlatChunkGenerator(BiomeSource biomeSource, boolean checkerboard, boolean marble, boolean monotone) {
         super(biomeSource);
         this.checkerboard = checkerboard;
         this.marble = marble;
+        this.monotone = monotone;
     }
 
     // --- Marble noise ---
@@ -98,6 +101,15 @@ public class OffWhiteFlatChunkGenerator extends ChunkGenerator {
     }
 
     private Block getSurfaceBlock(int worldX, int worldZ) {
+        if (monotone) {
+            int tileX = Math.floorDiv(worldX, 16);
+            int tileZ = Math.floorDiv(worldZ, 16);
+            boolean lightTile = (Math.floorMod(tileX + tileZ, 2) == 0);
+            int localX = Math.floorMod(worldX, 16);
+            int localZ = Math.floorMod(worldZ, 16);
+            int idx = localZ * 16 + localX;
+            return lightTile ? ModBlocks.MONO_LIGHT[idx] : ModBlocks.MONO_DARK[idx];
+        }
         if (marble) {
             double v = marbleValue(worldX, worldZ);
             int zone = marbleZone(v);

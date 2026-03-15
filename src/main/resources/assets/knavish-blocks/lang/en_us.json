@@ -48,10 +48,14 @@
   "block.knavish-blocks.marble_7": "Marble Block (Warm Grey)",
   "block.knavish-blocks.marble_8": "Marble Block (Medium Grey)",
 
-  "generator.knavish-blocks.offwhite_flat": "Flat",
-  "generator.knavish-blocks.offwhite_flat_checkerboard": "Chess",
+  "generator.knavish-blocks.offwhite_flat": "Off-White",
+  "generator.knavish-blocks.offwhite_monotone_grid": "Chess",
+  "generator.knavish-blocks.offwhite_flat_checkerboard": "Chess-Realistic",
   "generator.knavish-blocks.offwhite_checkerboard_normal": "Checkerboard Normal",
   "generator.knavish-blocks.offwhite_marble_flat": "Marble",
+
+  "block.knavish-blocks.mono_light_0": "Mono Light Block",
+  "block.knavish-blocks.mono_dark_0": "Mono Dark Block",
 
   "block.knavish-blocks.green_screen_block": "Green Screen Block",
   "block.knavish-blocks.blue_screen_block": "Blue Screen Block",

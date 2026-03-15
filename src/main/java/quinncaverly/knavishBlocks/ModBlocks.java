@@ -89,6 +89,17 @@ public class ModBlocks {
     public static final Block BLUSH_BLOCK = register("blush_block",
             Block::new, AbstractBlock.Settings.create().strength(2.0f).sounds(BlockSoundGroup.STONE), true);
 
+    // Monotone chess — 256 unique sub-pixel blocks per type; light=matte, dark=polished
+    public static final Block[] MONO_LIGHT = new Block[256];
+    public static final Block[] MONO_DARK  = new Block[256];
+    static {
+        AbstractBlock.Settings ms = AbstractBlock.Settings.create().strength(2.0f).sounds(BlockSoundGroup.STONE);
+        for (int i = 0; i < 256; i++) {
+            MONO_LIGHT[i] = register("mono_light_" + i, Block::new, ms, true);
+            MONO_DARK[i]  = register("mono_dark_"  + i, Block::new, ms, true);
+        }
+    }
+
     // Chroma key / green screen blocks — solid emissive colors for video compositing
     public static final Block GREEN_SCREEN_BLOCK = register("green_screen_block",
             Block::new, AbstractBlock.Settings.create().strength(2.0f).sounds(BlockSoundGroup.WOOL).luminance(state -> 15).emissiveLighting((state, world, pos) -> true), true);
